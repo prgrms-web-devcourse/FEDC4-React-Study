@@ -1,4 +1,3 @@
-import React from "react";
 import { styled } from "styled-components";
 import dummyImage from "/vite.svg";
 import { ProductCardProps } from "../interface";
