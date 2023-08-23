@@ -127,17 +127,17 @@ ISG, redirect, rewrite 기능 추가
 - 완벽한 해결책은 없다
 - 하지만 Next.js는 이러한 여러가지 방법들을 혼합(Hybrid)해서 사용할 수 있다
 
-# Hybrid (혼합) - 특정 목적을 위해 두개 이상의 기능이나 요소를 결합
+# Hybrid (혼합) : 특정 목적을 위해 두개 이상의 기능이나 요소를 결합
 
-- 특정목적 : 성능좋은 강력한 Wep app
-- 두개이상의 기능: CSR, SSG, ISR, SSR
+특정목적 : 성능좋은 강력한 Wep app
+두개이상의 기능: CSR, SSG, ISR, SSR
 
 ## 예시
 
-- 메인 페이지: ISR
-- About: SSG
-- Profile: SSR/CSR - 한 페이지에서도 여러 기법 사용 가능
-- Contact: CSR
+메인 페이지: ISR
+about: ssg
+profile: ssr/csr - 한 페이지에서도 여러 기법 사용 가능
+contact: csr
 
 # 하이드레이션
 
@@ -145,8 +145,8 @@ ISG, redirect, rewrite 기능 추가
 
 ## 일상생활의 비유
 
-1. 건조한 물티슈에 물을 뭍이면 원래의 물티슈가 된다
-2. 컵라면에 물만 부으면 라면을 먹을 수 있다.
+건조한 물티슈에 물을 뭍이면 원래의 물티슈가 된다,
+컵라면에 물만 부으면 라면을 먹을 수 있다.
 
 ## Next.js의 하이드레이션
 
