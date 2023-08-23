@@ -1,4 +1,4 @@
-const dummyData =[
+const dummyData = [
   {
     id: 1,
     price: 130000,
@@ -35,5 +35,5 @@ const dummyData =[
     title: "[헨리] Henry made in Korea",
     description: "여러분의 개발자라이프 응원할게요!",
   },
-]
-export default dummyData
+];
+export default dummyData;
