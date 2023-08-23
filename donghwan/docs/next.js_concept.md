@@ -160,10 +160,12 @@ contact: csr
 - 컴포넌트 렌더링
 
 ## TTV(Time To View) vs TTI(Time To Interaaction)
+- 성능 측정할때 CSR에서 TTV가 있는 것 처럼 SSR에서는 TTI가 존재
+- TTI는 사용자가 첫번째 콘텐츠를 본 시간부터 Interaction하기까지의 시간을 의미
+- 좋은 UX를 위해서는 이 TTI를 최적화하는게 중요
 
-언제 어떤 기법을 사용해야 할까?
-예시 의사 결정 트리
-![](https://mermaid.ink/img/pako:eNqrVkrOT0lVslJKy8kvT85ILCpRCHGJyVMAAkeNN01r3sxa-WbehDdzZyi8Xjjn1fYdb-YC0RaFt1Nb3sya8nbqnFcbGuw1FXR17Wr88msUnDRe924Ayr9t2QCUUHi9ueHVpr2vJ8x43TUFrBBqMFh9ZGpxjYJztHNwkEJ-kUJwcFAsRNYJJKsAkXbRAFm-eA8uk6BqQVa7RgcHu0ONcIEa4Rpco-AWjTAaKu7nX6PgHu0JsdijMqkoM0VBV0HdE-YSd3UFbQWgu2KVdJRyU4tyEzNTgAFUDTIjRqkkIzU3NUbJCsj0yUzPKIlRismrBSpMLC3JD67MS1ayKikqTdVRKi1ISSxJdclMTC9KzFWySkvMKQaKpqZkluQX-UKCHBzytQBjMpRq?type=png)
+## 언제 어떤 기법을 사용해야 할까? - 예시 의사 결정 트리 
+![mermaid-diagram-2023-08-23-203009](https://github.com/prgrms-web-devcourse/FEDC4-React-Study/assets/43432783/610b5ec9-2390-40f5-8d1b-562e284b1bf7)
 
 <!-- 1. 사용자의 로그인이 필요한가?
 1-1. Yes CSR|SSR|Hybrid(CSR+SSR)
