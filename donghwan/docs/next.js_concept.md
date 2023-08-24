@@ -1,12 +1,9 @@
 # Next.js란?
-
 - 리액트로 웹앱을 개발할때 **리액트만으로는 해결하기 힘든 한계점**들을 개선하기 위해 **많은 기능**들을 제공하는 프레임워크
 - Vercel이 개발한 Paas(Cloud Playform as a service)
 
 # Next.js의 역사
-
 ## Version 1 : 6가지 원칙과 함께
-
 1. 복잡한 설정 없이 설치해 사용하기 쉬울 것
 2. javascript로 풀스택을 할 수 있게 지원할 것
 3. 자동으로 코드 스플리팅과 서버 렌더링 지원
@@ -27,14 +24,12 @@ ISG, redirect, rewrite 기능 추가
 5. new toolchain turbopack
 
 # CSR, SSG, ISR, SSR
-
 ## CSR
 ### 작동방식
 - 렌더링하는 주체: Client
 ### 장점
 - 첫번째 로딩 이후 UX가 좋다
 ### 단점
-
 - TTV(Time To View), 즉 FCP(First Contentful paint)가 오래 걸린다
 - js에 의해 페이지가 그려지므로 js가 필수적이다. 만약 사용자가 js를 비활성화한다면 첫번째 페이지조차 볼 수 없다
 - SEO(검색엔진 최적화)가 힘들다
@@ -42,7 +37,6 @@ ISG, redirect, rewrite 기능 추가
 - CDN에 html이 캐시되지 않는다
 
 ### 번외 - CDN(Content Delivery Network)란?
-
 >- 서버가 미국에 있는 서비스와 한국에 있는 사용자가 있다고 가정하자
 >- 한국에 있는 사용자가 항상 미국에 있는 서버에 요청한다면 오랜 시간을 기다려야 할 것이다
 >- 이와 같은 상황을 보완하기 위한 기술이다
@@ -54,7 +48,6 @@ ISG, redirect, rewrite 기능 추가
 4. 한국에 있는 다른 사용자가 싱가포르에 있는 서버에 데이터를 요청하면 캐싱된 데이터를 받을 수 있으므로 로딩시간을 줄일 수 있다.
 
 ## SSG - Static Site Generation
-
 ### 작동방식
 - 렌더링 주체: 서버
 - 렌더링 시기: 빌드시 렌더링 - 서버에 만들어진 HTML파일이 존재
