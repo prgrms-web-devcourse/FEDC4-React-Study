@@ -99,3 +99,41 @@ ISG, redirect, rewrite 기능 추가
 ## 결론
 - 완벽한 해결책은 없다
 - 하지만 Next.js는 이러한 여러가지 방법들을 혼합(Hybrid)해서 사용할 수 있다
+
+# Hybrid (혼합) - 특정 목적을 위해 두개 이상의 기능이나 요소를 결합
+
+- 특정목적 : 성능좋은 강력한 Wep app
+- 두개이상의 기능: CSR, SSG, ISR, SSR
+
+## 예시
+
+- 메인 페이지: ISR
+- About: SSG
+- Profile: SSR/CSR - 한 페이지에서도 여러 기법 사용 가능
+- Contact: CSR
+
+# 하이드레이션
+
+수화: 물(리액트)로 가득 채우다
+
+## 일상생활의 비유
+
+1. 건조한 물티슈에 물을 적시면 원래의 물티슈가 된다
+2. 컵라면에 물만 부으면 라면을 먹을 수 있다.
+
+## Next.js의 하이드레이션
+
+1. 클라이언트에서 보여줄때 서버에서는 만들어진 페이지를 준다 (사용자에게 의미있는 데이터를 보여주기 위한 정적인 사이트) - preRendering
+2. 하지만 이 페이지는 javascript가 없기 때문에 사용자와 (클릭 등의 이벤트 처리와 같은) interaction이 불가능하다
+3. 그 후에 서버에서 react, js코드를 Client에 보내준다
+4. 정적인 사이트를 react로 채운다(하이드레이션) - 컴포넌트 렌더링
+
+## TTV(Time To View) vs TTI(Time To Interaction)
+
+- 성능 측정할때 CSR에서 TTV가 있는 것 처럼 SSR에서는 TTI가 존재
+- TTI는 사용자가 첫번째 콘텐츠를 본 시간부터 Interaction하기까지의 시간을 의미
+- 좋은 UX를 위해서는 이 TTI를 최적화하는게 중요
+
+## 언제 어떤 기법을 사용해야 할까? - 예시 의사 결정 트리
+
+![mermaid-diagram-2023-08-23-203009](https://github.com/prgrms-web-devcourse/FEDC4-React-Study/assets/43432783/610b5ec9-2390-40f5-8d1b-562e284b1bf7)
