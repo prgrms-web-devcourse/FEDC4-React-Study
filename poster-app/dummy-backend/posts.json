@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "body": "test",
+      "author": "testet",
+      "id": "6caffec6-b78c-450b-97a7-9b66fe4941ae"
+    },
+    {
+      "body": "되나요",
+      "author": "테스터",
+      "id": "5bad2528-c3b2-49b6-9f83-c506e3ede403"
+    },
+    {
+      "body": "하나더",
+      "author": "어떤",
+      "id": "c50dbacf-caf9-485e-8696-6ae64f797289"
+    },
+    {
+      "body": "어쩌구 데이터 저장되나요~",
+      "author": "되나요",
+      "id": "8d271cf5-cb9a-440d-8bc0-ffacbf71de06"
+    },
+    {
+      "body": "http로 바꿔서 재시도",
+      "author": "시도잉",
+      "id": "2c62e93a-7379-47fd-9738-1cf7651ab547"
+    },
+    {
+      "body": "This course is hopefully very helpful to you!",
+      "author": "Maximilian",
+      "id": "post-1"
+    }
+  ]
+}
