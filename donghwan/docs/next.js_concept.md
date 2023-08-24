@@ -1,9 +1,12 @@
 # Next.js란?
+
 - 리액트로 웹앱을 개발할때 **리액트만으로는 해결하기 힘든 한계점**들을 개선하기 위해 **많은 기능**들을 제공하는 프레임워크
 - Vercel이 개발한 Paas(Cloud Playform as a service)
 
 # Next.js의 역사
+
 ## Version 1 : 6가지 원칙과 함께
+
 1. 복잡한 설정 없이 설치해 사용하기 쉬울 것
 2. javascript로 풀스택을 할 수 있게 지원할 것
 3. 자동으로 코드 스플리팅과 서버 렌더링 지원
@@ -24,12 +27,14 @@ ISG, redirect, rewrite 기능 추가
 5. new toolchain turbopack
 
 # CSR, SSG, ISR, SSR
+
 ## CSR
 ### 작동방식
 - 렌더링하는 주체: Client
 ### 장점
 - 첫번째 로딩 이후 UX가 좋다
 ### 단점
+
 - TTV(Time To View), 즉 FCP(First Contentful paint)가 오래 걸린다
 - js에 의해 페이지가 그려지므로 js가 필수적이다. 만약 사용자가 js를 비활성화한다면 첫번째 페이지조차 볼 수 없다
 - SEO(검색엔진 최적화)가 힘들다
@@ -37,6 +42,7 @@ ISG, redirect, rewrite 기능 추가
 - CDN에 html이 캐시되지 않는다
 
 ### 번외 - CDN(Content Delivery Network)란?
+
 >- 서버가 미국에 있는 서비스와 한국에 있는 사용자가 있다고 가정하자
 >- 한국에 있는 사용자가 항상 미국에 있는 서버에 요청한다면 오랜 시간을 기다려야 할 것이다
 >- 이와 같은 상황을 보완하기 위한 기술이다
@@ -48,6 +54,7 @@ ISG, redirect, rewrite 기능 추가
 4. 한국에 있는 다른 사용자가 싱가포르에 있는 서버에 데이터를 요청하면 캐싱된 데이터를 받을 수 있으므로 로딩시간을 줄일 수 있다.
 
 ## SSG - Static Site Generation
+
 ### 작동방식
 - 렌더링 주체: 서버
 - 렌더링 시기: 빌드시 렌더링 - 서버에 만들어진 HTML파일이 존재
@@ -99,3 +106,41 @@ ISG, redirect, rewrite 기능 추가
 ## 결론
 - 완벽한 해결책은 없다
 - 하지만 Next.js는 이러한 여러가지 방법들을 혼합(Hybrid)해서 사용할 수 있다
+
+# Hybrid (혼합) - 특정 목적을 위해 두개 이상의 기능이나 요소를 결합
+
+- 특정목적 : 성능좋은 강력한 Wep app
+- 두개이상의 기능: CSR, SSG, ISR, SSR
+
+## 예시
+
+- 메인 페이지: ISR
+- About: SSG
+- Profile: SSR/CSR - 한 페이지에서도 여러 기법 사용 가능
+- Contact: CSR
+
+# 하이드레이션
+
+수화: 물(리액트)로 가득 채우다
+
+## 일상생활의 비유
+
+1. 건조한 물티슈에 물을 적시면 원래의 물티슈가 된다
+2. 컵라면에 물만 부으면 라면을 먹을 수 있다.
+
+## Next.js의 하이드레이션
+
+1. 클라이언트에서 보여줄때 서버에서는 만들어진 페이지를 준다 (사용자에게 의미있는 데이터를 보여주기 위한 정적인 사이트) - preRendering
+2. 하지만 이 페이지는 javascript가 없기 때문에 사용자와 (클릭 등의 이벤트 처리와 같은) interaction이 불가능하다
+3. 그 후에 서버에서 react, js코드를 Client에 보내준다
+4. 정적인 사이트를 react로 채운다(하이드레이션) - 컴포넌트 렌더링
+
+## TTV(Time To View) vs TTI(Time To Interaction)
+
+- 성능 측정할때 CSR에서 TTV가 있는 것 처럼 SSR에서는 TTI가 존재
+- TTI는 사용자가 첫번째 콘텐츠를 본 시간부터 Interaction하기까지의 시간을 의미
+- 좋은 UX를 위해서는 이 TTI를 최적화하는게 중요
+
+## 언제 어떤 기법을 사용해야 할까? - 예시 의사 결정 트리
+
+![mermaid-diagram-2023-08-23-203009](https://github.com/prgrms-web-devcourse/FEDC4-React-Study/assets/43432783/610b5ec9-2390-40f5-8d1b-562e284b1bf7)
