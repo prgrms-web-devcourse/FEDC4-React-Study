@@ -1,5 +1,13 @@
+import { usePostContext } from "../PostProvider";
+
 const PostItem = ({ post }) => {
-  return <li>{post.title}</li>;
+  const { onDeletePost } = usePostContext();
+  return (
+    <li>
+      {post.title}
+      <button onClick={() => onDeletePost(post.id)}>delete</button>
+    </li>
+  );
 };
 
 export default PostItem;
