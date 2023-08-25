@@ -1,9 +1,15 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
+import { Post } from "../../types";
+
+interface Action {
+  type: string;
+  payload?: any;
+}
 
 const PostContext = createContext();
 export const usePostContext = () => useContext(PostContext);
 
-const reducer = (state, action) => {
+const reducer = (state: Post[], action: Action) => {
   switch (action.type) {
     case "INIT_POSTS": {
       return action.payload;

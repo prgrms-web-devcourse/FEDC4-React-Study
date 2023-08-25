@@ -1,5 +1,6 @@
 import PostItem from "../PostItem";
 import { usePostContext } from "../PostProvider";
+import { InitPosts, Post } from "../../types";
 
 const PostList = () => {
   const { posts } = usePostContext();
