@@ -4,11 +4,11 @@ import { usePostContext } from "../PostProvider";
 const PostList = () => {
   const { posts } = usePostContext();
   return (
-    <div>
+    <ul>
       {posts.map((post) => (
         <PostItem key={post.id} post={post}></PostItem>
       ))}
-    </div>
+    </ul>
   );
 };
 export default PostList;
