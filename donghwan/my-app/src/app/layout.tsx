@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import styles from './layout.module.css';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,8 +22,9 @@ export default function RootLayout({
         <header className={styles.header}>
           <h1>Demo Note</h1>
           <nav className={styles.nav}>
-            <a href="">Contact</a>
-            <a href="">About</a>
+            <Link href="/products">Products</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/about">About</Link>
           </nav>
         </header>
 
