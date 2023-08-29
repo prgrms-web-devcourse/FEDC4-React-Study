@@ -1,27 +1,20 @@
 import { useState } from "react";
 
-interface InitForm {
-  userId: number;
+interface ValidateForm {
   title: string;
   body: string;
-  id?: number;
 }
 
-interface ValidateForm {
-  title?: string;
-  body?: string;
-}
-
-const useForm = ({
+function useForm<InitForm>({
   initialState,
   onSubmit,
   validate,
 }: {
   initialState: InitForm;
-  validate: (values: InitForm) => ValidateForm; // values를 매개변수로 받고 {} 또는 errors를 반환
+  validate: (values: InitForm) => Partial<ValidateForm>; // values를 매개변수로 받고 {} 또는 errors를 반환
   onSubmit: (values: InitForm) => void; // values를 매개변수로 받고 반환하는거 없음
-}) => {
-  const [values, setValues] = useState(initialState);
+}) {
+  const [values, setValues] = useState<InitForm>(initialState);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,6 +39,6 @@ const useForm = ({
     handleChange,
     handleSubmit,
   };
-};
+}
 
 export default useForm;

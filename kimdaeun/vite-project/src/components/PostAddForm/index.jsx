@@ -11,6 +11,7 @@ const PostAddForm = () => {
       body: "",
     },
     onSubmit: (values) => {
+      console.log(values);
       onAddPost(values);
     },
     validate: ({ title, body }) => {
