@@ -8,7 +8,6 @@ import clothesImage from "../../../public/images/clothes.jpg";
 
 export default async function Products() {
   //서버 파일(데이터베이스)에 있는 제품의 리스트를 읽어와서 , 그걸 보여줌
-  throw new Error();
   const products = await getProducts();
 
   return (
