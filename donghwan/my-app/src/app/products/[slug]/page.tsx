@@ -1,5 +1,6 @@
-import { getProduct, getProducts } from '@/service/products';
-import { notFound } from 'next/navigation';
+import { getProduct, getProducts } from "@/service/products";
+import { notFound } from "next/navigation";
+import Image from "next/image";
 
 type Props = {
   params: {
@@ -22,7 +23,12 @@ export default async function Product({ params: { slug } }: Props) {
     notFound();
   }
 
-  return <h1>{product.name} 소개 페이지입니다!</h1>;
+  return (
+    <>
+      <h1>{product.name} 소개 페이지입니다!</h1>
+      <Image src={product.image} alt={product.name} width={400} height={400} />
+    </>
+  );
 }
 
 export async function generateStaticParams() {
