@@ -1,9 +1,9 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 export default function Counter() {
   const [count, setCount] = useState(0);
-  console.log('안녕 - client!');
+  console.log("안녕 - client!");
   return (
     <>
       <p>{count}</p>
