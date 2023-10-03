@@ -1,6 +1,6 @@
 # Next.js란?
 - 리액트로 웹앱을 개발할때 **리액트만으로는 해결하기 힘든 한계점**들을 개선하기 위해 **많은 기능**들을 제공하는 프레임워크
-- Vercel이 개발한 Paas(Cloud Playform as a service)
+- Paas(Cloud Playform as a service)인 Vercel이 개발한 프레임워크
 
 # Next.js의 역사
 ## Version 1 : 6가지 원칙과 함께
